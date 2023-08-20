@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import dj_database_url
+import os
 from pathlib import Path
 from decouple import config
 
@@ -96,6 +98,11 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+# }
+
+# postgres://dkart_db_user:aC8EC0sqdMKTqaCYva39TfSKBr8V5vnE@dpg-cjh1h7s1ja0c739m7cqg-a.oregon-postgres.render.com/dkart_db
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
